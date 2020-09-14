@@ -1,14 +1,8 @@
 <!DOCTYPE html>
-<!--
-* CoreUI - Free Bootstrap Admin Template
-* @version v3.0.0-alpha.1
-* @link https://coreui.io
-* Copyright (c) 2019 creativeLabs Łukasz Holeczek
-* Licensed under MIT (https://coreui.io/license)
--->
 
 <html lang="en">
-  <head>
+
+<head>
     <base href="./">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +10,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>CoreUI Free Bootstrap Admin Template</title>
+    <title>{{ config('app.name') }}</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
@@ -42,42 +36,27 @@
 
     @yield('css')
 
-    <!-- Global site tag (gtag.js) - Google Analytics-->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      // Shared ID
-      gtag('config', 'UA-118965717-3');
-      // Bootstrap ID
-      gtag('config', 'UA-118965717-5');
-    </script>
-
     <link href="{{ asset('css/coreui-chartjs.css') }}" rel="stylesheet">
-  </head>
+</head>
 
 
 
-  <body class="c-app">
+<body class="c-app">
     <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
 
-      @include('dashboard.shared.nav-builder')
+        @include('dashboard.shared.nav-builder')
 
-      @include('dashboard.shared.header')
+        @include('dashboard.shared.header')
 
-      <div class="c-body">
+        <div class="c-body">
 
-        <main class="c-main">
+            <main class="c-main">
 
-          @yield('content') 
+                @yield('content')
 
-        </main>
-        @include('dashboard.shared.footer')
-      </div>
+            </main>
+            @include('dashboard.shared.footer')
+        </div>
     </div>
 
 
@@ -90,5 +69,6 @@
 
 
 
-  </body>
+</body>
+
 </html>
